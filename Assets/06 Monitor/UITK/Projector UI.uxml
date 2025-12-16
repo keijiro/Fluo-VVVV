@@ -1,0 +1,3 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="root" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/06%20Monitor/Composite/Composite.asset?fileID=8600000&amp;guid=7f656ae72923842ee93f35610b558a36&amp;type=2#Composite&quot;); -unity-background-scale-mode: scale-to-fit;" />
+</ui:UXML>

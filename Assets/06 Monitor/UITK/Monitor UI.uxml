@@ -8,6 +8,9 @@
                 <ui:DataBinding property="choices" data-source-path="SourceList" binding-mode="ToTarget" />
             </Bindings>
         </ui:DropdownField>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+            <VJUITK.VJKnob label="Fade" name="knob-fadeout" />
+        </ui:VisualElement>
         <ui:VisualElement name="debug-views" style="justify-content: center; flex-grow: 1;">
             <ui:VisualElement name="prefilter-row" class="debugViewRow">
                 <ui:VisualElement name="prefilter-color" class="debugView" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: left 0; background-position-y: top 0;" />
