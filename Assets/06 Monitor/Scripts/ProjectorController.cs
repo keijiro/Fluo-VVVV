@@ -22,7 +22,9 @@ public sealed class ProjectorController : MonoBehaviour
 
     void Update()
       => _projector.style.unityBackgroundImageTintColor
-           = new StyleColor(Color.white * (1 - _knob.value));
+           = new StyleColor(Grayscale(1 - _knob.value));
+
+    static Color Grayscale(float v) => new Color(v, v, v);
 }
 
 } // namespace Fluo

@@ -13,7 +13,6 @@ public sealed class SourceSelector : MonoBehaviour
     #region Scene object references
 
     [SerializeField] ImageSource _imageSource = null;
-    [SerializeField] bool _initiallyHidden = false;
 
     #endregion
 
@@ -36,13 +35,13 @@ public sealed class SourceSelector : MonoBehaviour
       = (new List<string>(), -1000);
 
     bool ShouldUpdateSourceList
-      => Cursor.visible && Time.time - _sourceList.time > CacheInterval;
+      => Time.time - _sourceList.time > CacheInterval;
 
     List<string> GetCachedSourceList()
     {
         if (ShouldUpdateSourceList)
         {
-            var uvc = WebCamTexture.devices.Select(dev => "UVC - " + dev.name);
+            var uvc = WebCamTexture.devices.Select(dev => dev.name);
             _sourceList.list = uvc.ToList();
             _sourceList.time = Time.time;
         }
@@ -59,14 +58,9 @@ public sealed class SourceSelector : MonoBehaviour
     DropdownField UISelector
       => UIRoot.Q<DropdownField>("source-selector");
 
-    void ToggleUI()
-      => UIRoot.Q("debug-root").visible = (Cursor.visible ^= true);
-
     void SelectSource(string name)
     {
-        _imageSource.SourceName = name.Substring(6);
-        _imageSource.SourceType = name.StartsWith("UVC") ?
-          ImageSourceType.Webcam : ImageSourceType.Ndi;
+        _imageSource.SourceName = name;
         PlayerPrefs.SetString(PrefKey, name);
     }
 
@@ -79,19 +73,12 @@ public sealed class SourceSelector : MonoBehaviour
         // This component as a UI data source
         UISelector.dataSource = this;
 
-        // UI root as a clickable UI visibility toggle
-        UIRoot.Q("click-area-1").AddManipulator(new Clickable(ToggleUI));
-        UIRoot.Q("click-area-2").AddManipulator(new Clickable(ToggleUI));
-
         // Dropdown selection callback
         UISelector.RegisterValueChangedCallback(evt => SelectSource(evt.newValue));
 
         // Initial source selection
         if (PlayerPrefs.HasKey(PrefKey))
             SelectSource(UISelector.value = PlayerPrefs.GetString(PrefKey));
-
-        // Initial UI visibility
-        if (_initiallyHidden) ToggleUI();
     }
 
     #endregion

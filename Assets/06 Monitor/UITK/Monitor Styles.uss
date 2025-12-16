@@ -1,11 +1,11 @@
+/* standard elements */
+
 .unity-text-element {
-    -unity-font-definition: url("project://database/Assets/00%20Common/Fonts/Kode_Mono/static/KodeMono-Regular.ttf?fileID=12800000&guid=62868cb1b67cc4eceb0a7e34dc175541&type=3#KodeMono-Regular");
     color: rgb(214, 214, 214);
-    font-size: 24px;
 }
 
 .unity-base-field__label {
-    min-width: 120px;
+    min-width: 80px;
     margin: 0 0 0 8px;
     padding: 0;
     -unity-text-align: middle-left;
@@ -18,7 +18,7 @@
 
 .unity-base-popup-field__input {
     background-color: rgba(0, 0, 0, 0);
-    max-width: 50%;
+    max-width: 30%;
     border-width: 0;
     border-bottom-width: 1px;
     margin: 0 16px 0 8px;
@@ -45,22 +45,36 @@
     align-self: center;
 }
 
-.debugView {
-    width: 400px;
-    height: 225px;
-    background-size: 300% 300%;
-    margin: 8px;
+/* Controllers */
+
+.control-section-label {
+    position: absolute;
+    top: -22px;
+    font-size: 16px;
 }
 
-.debugViewRow {
+.control-section {
+    flex-direction: row;
+    flex-grow: 1;
+    margin-top: 22px;
+}
+
+/* Debug views */
+
+.debug-view-row {
     flex-direction: row;
     margin-bottom: 16px;
 }
 
-.rowLabel {
+.debug-view {
+    width: 288px;
+    height: 162px;
+    background-size: 300% 300%;
+    margin: 8px;
+}
+
+.debug-view-label {
     position: absolute;
-    top: 16px;
-    left: 16px;
-    margin: 0;
+    margin: 8px;
     padding: 0;
 }

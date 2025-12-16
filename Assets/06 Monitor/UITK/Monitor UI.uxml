@@ -1,35 +1,70 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/06%20Monitor/UITK/Monitor%20Styles.uss?fileID=7433441132597879392&amp;guid=fc5ef10e9883b4dafae0e05a1ce145ca&amp;type=3#Monitor Styles" />
-    <ui:VisualElement name="render" style="background-image: url(&quot;project://database/Assets/06%20Monitor/Composite/Composite.asset?fileID=8600000&amp;guid=7f656ae72923842ee93f35610b558a36&amp;type=2#Composite&quot;); -unity-background-scale-mode: scale-to-fit; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
-    <ui:VisualElement name="click-area-1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
-    <ui:VisualElement name="debug-root" style="position: absolute; top: 30px; left: 30px; right: 30px; bottom: 30px;">
+    <ui:VisualElement name="render" style="background-image: url(&quot;project://database/Assets/06%20Monitor/Composite/Composite.asset?fileID=8600000&amp;guid=7f656ae72923842ee93f35610b558a36&amp;type=2#Composite&quot;); -unity-background-scale-mode: scale-to-fit; position: absolute; top: 0; left: 0; right: 0; bottom: 0; -unity-background-image-tint-color: rgb(128, 128, 128); padding-top: 40px; padding-right: 40px; padding-bottom: 40px; padding-left: 40px; justify-content: space-around;">
         <ui:DropdownField name="source-selector" label="Source" data-source-type="Fluo.SourceSelector, Assembly-CSharp" focusable="false">
             <Bindings>
                 <ui:DataBinding property="choices" data-source-path="SourceList" binding-mode="ToTarget" />
             </Bindings>
         </ui:DropdownField>
-        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-            <VJUITK.VJKnob label="Fade" name="knob-fadeout" />
+        <ui:VisualElement name="row" style="flex-direction: row;">
+            <ui:VisualElement name="section" class="control-section">
+                <ui:Label text="Camera" class="control-section-label" />
+                <VJUITK.VJKnob name="knob-0" label="Angle" high-value="1" value="0.5" />
+                <VJUITK.VJKnob name="knob-1" label="Distance" high-value="1" value="0.5" />
+            </ui:VisualElement>
+            <ui:VisualElement name="section" class="control-section">
+                <ui:Label text="Canvas" class="control-section-label" />
+                <VJUITK.VJKnob name="knob-2" label="Brush" high-value="1" value="1" />
+                <VJUITK.VJKnob name="knob-9" label="Palette" high-value="1" />
+                <VJUITK.VJButton name="button-0" label="Shuffle" />
+                <VJUITK.VJKnob name="knob-3" label="Sustain" high-value="1" value="0.5" />
+                <VJUITK.VJKnob name="knob-4" label="Drops" high-value="1" />
+                <VJUITK.VJKnob name="knob-5" label="Streams" high-value="1" />
+            </ui:VisualElement>
+            <ui:VisualElement name="section" class="control-section">
+                <ui:Label text="Theme" class="control-section-label" />
+                <VJUITK.VJKnob name="knob-13" label="Hue" high-value="1" />
+            </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="debug-views" style="justify-content: center; flex-grow: 1;">
-            <ui:VisualElement name="prefilter-row" class="debugViewRow">
-                <ui:VisualElement name="prefilter-color" class="debugView" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: left 0; background-position-y: top 0;" />
-                <ui:VisualElement name="prefilter-alpha" class="debugView" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: center 0; background-position-y: top 0;" />
-                <ui:Label text="Video" class="rowLabel" />
+        <ui:VisualElement name="row" style="flex-direction: row;">
+            <ui:VisualElement name="section" class="control-section">
+                <ui:Label text="Environment VFX" class="control-section-label" />
+                <VJUITK.VJKnob name="knob-6" label="Bubbles" high-value="1" value="0" />
+                <VJUITK.VJKnob name="knob-7" label="Streams" high-value="1" />
+                <VJUITK.VJKnob name="knob-8" label="Confetti" high-value="1" />
             </ui:VisualElement>
-            <ui:VisualElement name="brush-row" class="debugViewRow">
-                <ui:VisualElement name="injection-color" class="debugView" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: left 0; background-position-y: bottom 0;" />
-                <ui:VisualElement name="injection-alpha" class="debugView" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: center 0; background-position-y: bottom 0;" />
-                <ui:VisualElement name="motion-vector" class="debugView" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: center 0; background-position-y: center 0;" />
-                <ui:VisualElement name="velocity-field" class="debugView" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: left 0; background-position-y: center 0;" />
-                <ui:Label text="Brush" class="rowLabel" />
+            <ui:VisualElement name="section" class="control-section">
+                <ui:Label text="Lighting" class="control-section-label" />
+                <VJUITK.VJKnob name="knob-10" label="Fixed" high-value="1" value="1" />
+                <VJUITK.VJKnob name="knob-11" label="Floating" high-value="1" />
             </ui:VisualElement>
-            <ui:VisualElement name="canvas-row" class="debugViewRow">
-                <ui:VisualElement name="canvas-color" class="debugView" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: right 0; background-position-y: bottom 0;" />
-                <ui:VisualElement name="canvas-alpha" class="debugView" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: right 0; background-position-y: center 0;" />
-                <ui:Label text="Canvas" class="rowLabel" />
+            <ui:VisualElement name="section" class="control-section">
+                <ui:Label text="Duotone" class="control-section-label" />
+                <VJUITK.VJToggle name="toggle-0" label="Enable" />
+                <VJUITK.VJButton name="button-1" label="Shuffle" />
             </ui:VisualElement>
-            <ui:VisualElement name="click-area-2" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
+            <ui:VisualElement name="section" class="control-section">
+                <ui:Label text="Master" class="control-section-label" />
+                <VJUITK.VJKnob name="knob-12" label="Mic" high-value="1" value="1" />
+                <VJUITK.VJKnob label="Fade" name="knob-fadeout" high-value="1" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="prefilter-row" class="debug-view-row">
+            <ui:VisualElement name="prefilter-color" class="debug-view" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: left 0; background-position-y: top 0;">
+                <ui:Label text="Video" class="debug-view-label" />
+            </ui:VisualElement>
+            <ui:VisualElement name="prefilter-alpha" class="debug-view" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: center 0; background-position-y: top 0;" />
+            <ui:VisualElement name="canvas-color" class="debug-view" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: right 0; background-position-y: bottom 0;">
+                <ui:Label text="Canvas" class="debug-view-label" />
+            </ui:VisualElement>
+            <ui:VisualElement name="canvas-alpha" class="debug-view" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: right 0; background-position-y: center 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="brush-row" class="debug-view-row">
+            <ui:VisualElement name="injection-color" class="debug-view" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: left 0; background-position-y: bottom 0;">
+                <ui:Label text="Brush" class="debug-view-label" />
+            </ui:VisualElement>
+            <ui:VisualElement name="injection-alpha" class="debug-view" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: center 0; background-position-y: bottom 0;" />
+            <ui:VisualElement name="motion-vector" class="debug-view" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: center 0; background-position-y: center 0;" />
+            <ui:VisualElement name="velocity-field" class="debug-view" style="background-image: url(&quot;project://database/Assets/06%20Monitor/DebugView/DebugView.asset?fileID=8600000&amp;guid=62395233aca724009a80ef9c149cdb87&amp;type=2#DebugView&quot;); background-position-x: left 0; background-position-y: center 0;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
