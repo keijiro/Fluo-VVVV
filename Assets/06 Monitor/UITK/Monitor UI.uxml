@@ -45,7 +45,7 @@
             <ui:VisualElement name="section" class="control-section">
                 <ui:Label text="Master" class="control-section-label" />
                 <VJUITK.VJKnob name="knob-12" label="Mic" high-value="1" value="1" />
-                <VJUITK.VJKnob label="Fade" name="knob-fadeout" high-value="1" />
+                <VJUITK.VJKnob label="Fade" name="knob-14" high-value="1" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="prefilter-row" class="debug-view-row">
