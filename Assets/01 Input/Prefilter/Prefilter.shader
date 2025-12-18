@@ -24,7 +24,7 @@ TEXTURE2D(_BodyPixTex);
 float4 _BodyPixTex_TexelSize;
 
 float4 _Fluo_AudioLevel;
-float4 _Fluo_ThemeColor;
+float4 _Fluo_BGFXColor;
 
 // LUT application
 float3 ApplyLut(float3 input)
@@ -83,7 +83,7 @@ float4 BackgroundEffect(float2 uv)
     float n = SimplexNoise(float2(uv.x * 6, t * 2));
     float thresh = max(0, _Fluo_AudioLevel.x - 0.333);
     float alpha = 1 - smoothstep(thresh, 1.1 * thresh, abs(n));
-    return float4(_Fluo_ThemeColor.rgb, alpha);
+    return float4(_Fluo_BGFXColor.rgb, alpha);
 }
 
 // Shared vertex shader

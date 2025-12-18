@@ -1835,8 +1835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfbfbbc99e3f402d9d4c2faf236a1b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Hue>k__BackingField: 0
-  <Saturation>k__BackingField: 0
+  <BGFXHue>k__BackingField: 0
+  <BGFXSaturation>k__BackingField: 0
 --- !u!1 &845794251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,7 +2261,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 736843371}
         m_TargetAssemblyTypeName: Fluo.ThemeController, Assembly-CSharp
-        m_MethodName: set_Saturation
+        m_MethodName: set_BGFXSaturation
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2338,7 +2338,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 736843371}
         m_TargetAssemblyTypeName: Fluo.ThemeController, Assembly-CSharp
-        m_MethodName: set_Hue
+        m_MethodName: set_BGFXHue
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

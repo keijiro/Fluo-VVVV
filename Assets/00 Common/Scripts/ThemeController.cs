@@ -4,11 +4,14 @@ namespace Fluo {
 
 public sealed class ThemeController : MonoBehaviour
 {
-    [field:SerializeField, Range(0, 1)] public float Hue { get; set; }
-    [field:SerializeField, Range(0, 1)] public float Saturation { get; set; }
+    [field:SerializeField, Range(0, 1)] public float BGFXHue { get; set; }
+    [field:SerializeField, Range(0, 1)] public float BGFXSaturation { get; set; }
 
     void Update()
-      => Shader.SetGlobalColor(ShaderID.FluoThemeColor, Color.HSVToRGB(Hue, Saturation, 1));
+    {
+        var bgfx = Color.HSVToRGB(BGFXHue, BGFXSaturation, 1);
+        Shader.SetGlobalColor(ShaderID.FluoBGFXColor, bgfx);
+    }
 }
 
 } // namespace Fluo
