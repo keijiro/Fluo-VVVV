@@ -2,18 +2,39 @@ using UnityEngine;
 
 namespace Fluo {
 
+[System.Serializable]
+struct ThemeSettings
+{
+#pragma warning disable 0649
+    [ColorUsage(false)] public Color BGFXColor;
+    [ColorUsage(false)] public Color RampColor1;
+    [ColorUsage(false)] public Color RampColor2;
+#pragma warning restore 0649
+}
+
 public sealed class ThemeController : MonoBehaviour
 {
-    [field:SerializeField, ColorUsage(false)] public Color BGFXColor { get; set; } = Color.white;
-    [field:SerializeField, ColorUsage(false)] public Color RampColor1 { get; set; } = Color.red;
-    [field:SerializeField, ColorUsage(false)] public Color RampColor2 { get; set; } = Color.blue;
+    [SerializeField] ThemeSettings[] _themes = null;
 
-    void Update()
+    void Start()
+      => SelectTheme(0);
+
+    public void SelectTheme(int index)
     {
-        Shader.SetGlobalColor(ShaderID.FluoBGFXColor, BGFXColor);
-        Shader.SetGlobalColor(ShaderID.FluoRampColor1, RampColor1);
-        Shader.SetGlobalColor(ShaderID.FluoRampColor2, RampColor2);
+        var t = _themes[index];
+        if (t.BGFXColor != default) Shader.SetGlobalColor(ShaderID.FluoBGFXColor,  t.BGFXColor);
+        if (t.RampColor1 != default) Shader.SetGlobalColor(ShaderID.FluoRampColor1, t.RampColor1);
+        if (t.RampColor2 != default) Shader.SetGlobalColor(ShaderID.FluoRampColor2, t.RampColor2);
     }
+
+#if UNITY_EDITOR
+    [field:SerializeField] public int PreviewIndex { get; set; } = -1;
+
+    void OnValidate()
+    {
+        if (PreviewIndex >= 0) SelectTheme(PreviewIndex);
+    }
+#endif
 }
 
 } // namespace Fluo
