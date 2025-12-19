@@ -4,13 +4,15 @@ namespace Fluo {
 
 public sealed class ThemeController : MonoBehaviour
 {
-    [field:SerializeField, Range(0, 1)] public float BGFXHue { get; set; }
-    [field:SerializeField, Range(0, 1)] public float BGFXSaturation { get; set; }
+    [field:SerializeField, ColorUsage(false)] public Color BGFXColor { get; set; } = Color.white;
+    [field:SerializeField, ColorUsage(false)] public Color RampColor1 { get; set; } = Color.red;
+    [field:SerializeField, ColorUsage(false)] public Color RampColor2 { get; set; } = Color.blue;
 
     void Update()
     {
-        var bgfx = Color.HSVToRGB(BGFXHue, BGFXSaturation, 1);
-        Shader.SetGlobalColor(ShaderID.FluoBGFXColor, bgfx);
+        Shader.SetGlobalColor(ShaderID.FluoBGFXColor, BGFXColor);
+        Shader.SetGlobalColor(ShaderID.FluoRampColor1, RampColor1);
+        Shader.SetGlobalColor(ShaderID.FluoRampColor2, RampColor2);
     }
 }
 

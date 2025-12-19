@@ -20,11 +20,6 @@
                 <VJUITK.VJKnob name="knob-4" label="Drops" high-value="1" />
                 <VJUITK.VJKnob name="knob-5" label="Streams" high-value="1" />
             </ui:VisualElement>
-            <ui:VisualElement name="section" class="control-section">
-                <ui:Label text="BG Fx" class="control-section-label" />
-                <VJUITK.VJKnob name="knob-13" label="Hue" high-value="1" />
-                <VJUITK.VJKnob name="knob-12" label="Mic" high-value="1" value="1" />
-            </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="row" style="flex-direction: row;">
             <ui:VisualElement name="section" class="control-section">
@@ -45,6 +40,7 @@
             </ui:VisualElement>
             <ui:VisualElement name="section" class="control-section">
                 <ui:Label text="Master" class="control-section-label" />
+                <VJUITK.VJKnob name="knob-12" label="Mic" high-value="1" value="1" />
                 <VJUITK.VJKnob label="Fade" name="knob-14" high-value="1" />
             </ui:VisualElement>
         </ui:VisualElement>

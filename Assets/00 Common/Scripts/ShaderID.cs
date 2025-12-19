@@ -10,6 +10,8 @@ static class ShaderID
     public static readonly int FluoAudioLevel = Shader.PropertyToID("_Fluo_AudioLevel");
     public static readonly int FluoBGFXColor = Shader.PropertyToID("_Fluo_BGFXColor");
     public static readonly int FluoCanvasAlphaDecay = Shader.PropertyToID("_Fluo_CanvasAlphaDecay");
+    public static readonly int FluoRampColor1 = Shader.PropertyToID("_Fluo_RampColor1");
+    public static readonly int FluoRampColor2 = Shader.PropertyToID("_Fluo_RampColor2");
     public static readonly int LutBlend = Shader.PropertyToID("_LutBlend");
     public static readonly int LutTex = Shader.PropertyToID("_LutTex");
 }
