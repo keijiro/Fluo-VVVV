@@ -1657,7 +1657,39 @@ VisualEffect:
     m_AnimationCurve:
       m_Array: []
     m_Gradient:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          key0: {r: 0.027046312, g: 0.014262766, b: -0.0000000011280645, a: 1}
+          key1: {r: 0.0061162002, g: 0.036618438, b: 0.000000014664838, a: 1}
+          key2: {r: 0.15155149, g: -0.000000021809246, b: 0.053322762, a: 0}
+          key3: {r: 0.06384907, g: 0.10852908, b: 0.00000004512258, a: 0}
+          key4: {r: 0.18756005, g: 0.14740118, b: -0.00000004512258, a: 0}
+          key5: {r: 0.00000028878452, g: 0.27029192, b: 0.28082195, a: 0}
+          key6: {r: -0.000000192523, g: 0.41319454, b: 0.476606, a: 0}
+          key7: {r: 0.99999994, g: 0.21754149, b: 0.77691543, a: 0}
+          ctime0: 8192
+          ctime1: 16384
+          ctime2: 24576
+          ctime3: 32768
+          ctime4: 40959
+          ctime5: 49151
+          ctime6: 57343
+          ctime7: 65535
+          atime0: 0
+          atime1: 65535
+          atime2: 0
+          atime3: 0
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 1
+          m_ColorSpace: -1
+          m_NumColorKeys: 8
+          m_NumAlphaKeys: 2
+        m_Name: Palette
+        m_Overridden: 1
     m_NamedObject:
       m_Array: []
     m_Bool:
@@ -1795,7 +1827,8 @@ MonoBehaviour:
   - BGFXColor: {r: 1, g: 0, b: 0, a: 0}
     RampColor1: {r: 0.08018869, g: 0.17922637, b: 1, a: 0}
     RampColor2: {r: 0.6792453, g: 0, b: 0.2909518, a: 0}
-  <PreviewIndex>k__BackingField: -1
+  _themeIndex: 0
+  _transitionSpeed: 4
 --- !u!1 &845794251
 GameObject:
   m_ObjectHideFlags: 0
@@ -4924,8 +4957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <SourceMode>k__BackingField: 0
-  <LowColor>k__BackingField: {r: 1, g: 0, b: 0.78841305, a: 1}
-  <HighColor>k__BackingField: {r: 1, g: 0.56485766, b: 0, a: 1}
+  <LowColor>k__BackingField: {r: 0.00000057756904, g: 0.50056976, b: 0.4853555, a: 1}
+  <HighColor>k__BackingField: {r: 0.99999994, g: 0.40940058, b: 0.6563011, a: 1}
   <SplitLevel>k__BackingField: 0.3
   <BlackColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
   <BlackLevel>k__BackingField: 0.16
