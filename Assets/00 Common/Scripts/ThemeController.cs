@@ -1,4 +1,6 @@
 using UnityEngine;
+using Unity.Mathematics;
+using Klak.Math;
 
 namespace Fluo {
 
@@ -15,26 +17,34 @@ struct ThemeSettings
 public sealed class ThemeController : MonoBehaviour
 {
     [SerializeField] ThemeSettings[] _themes = null;
+    [SerializeField] int _themeIndex = 0;
+    [SerializeField] float _transitionSpeed = 4;
 
-    void Start()
-      => SelectTheme(0);
+    (float3 bgfx, float3 ramp1, float3 ramp2) _current;
+
+    float3 C2V3(Color c) => math.float3(c.r, c.g, c.b);
+    Color V32C(float3 v) => new Color(v.x, v.y, v.z);
 
     public void SelectTheme(int index)
+        => _themeIndex = index;
+
+    void start()
     {
-        var t = _themes[index];
-        if (t.BGFXColor != default) Shader.SetGlobalColor(ShaderID.FluoBGFXColor,  t.BGFXColor);
-        if (t.RampColor1 != default) Shader.SetGlobalColor(ShaderID.FluoRampColor1, t.RampColor1);
-        if (t.RampColor2 != default) Shader.SetGlobalColor(ShaderID.FluoRampColor2, t.RampColor2);
+        _current.bgfx = C2V3(_themes[_themeIndex].BGFXColor);
+        _current.ramp1 = C2V3(_themes[_themeIndex].RampColor1);
+        _current.ramp2 = C2V3(_themes[_themeIndex].RampColor2);
     }
 
-#if UNITY_EDITOR
-    [field:SerializeField] public int PreviewIndex { get; set; } = -1;
-
-    void OnValidate()
+    void Update()
     {
-        if (PreviewIndex >= 0) SelectTheme(PreviewIndex);
+        _current.bgfx = ExpTween.Step(_current.bgfx, C2V3(_themes[_themeIndex].BGFXColor), _transitionSpeed);
+        _current.ramp1 = ExpTween.Step(_current.ramp1, C2V3(_themes[_themeIndex].RampColor1), _transitionSpeed);
+        _current.ramp2 = ExpTween.Step(_current.ramp2, C2V3(_themes[_themeIndex].RampColor2), _transitionSpeed);
+
+        Shader.SetGlobalColor(ShaderID.FluoBGFXColor, V32C(_current.bgfx));
+        Shader.SetGlobalColor(ShaderID.FluoRampColor1, V32C(_current.ramp1));
+        Shader.SetGlobalColor(ShaderID.FluoRampColor2, V32C(_current.ramp2));
     }
-#endif
 }
 
 } // namespace Fluo
