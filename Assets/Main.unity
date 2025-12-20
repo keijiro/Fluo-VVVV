@@ -179,6 +179,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Action
       m_Flags: 0
+    - m_Name: 
+      m_Id: 130152d9-62af-4e2d-b5d0-3fcc5aabcf6f
+      m_Path: <RemoteInputDevice>/button2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
     m_Flags: 0
   _onEvent:
     m_PersistentCalls:
@@ -736,9 +744,6 @@ GameObject:
   m_Component:
   - component: {fileID: 348662611}
   - component: {fileID: 348662615}
-  - component: {fileID: 348662612}
-  - component: {fileID: 348662614}
-  - component: {fileID: 348662613}
   m_Layer: 0
   m_Name: Camera Distance
   m_TagString: Untagged
@@ -761,147 +766,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 124099774}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &348662612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348662610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7273b4976176c463587675de4c9d228a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _action:
-    m_Name: Action
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 097b91fe-b83b-4c0a-9f17-9515c190b33f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: ec3a3469-9bb5-4e33-a30e-df6c6c8a134f
-      m_Path: <Keyboard>/q
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Action
-      m_Flags: 0
-    m_Flags: 0
-  _onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 26578945}
-        m_TargetAssemblyTypeName: Fluo.CameraController, Assembly-CSharp
-        m_MethodName: set_DistanceParameter
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _offEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &348662613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348662610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7273b4976176c463587675de4c9d228a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _action:
-    m_Name: Action
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 097b91fe-b83b-4c0a-9f17-9515c190b33f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: ec3a3469-9bb5-4e33-a30e-df6c6c8a134f
-      m_Path: <Keyboard>/e
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Action
-      m_Flags: 0
-    m_Flags: 0
-  _onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 26578945}
-        m_TargetAssemblyTypeName: Fluo.CameraController, Assembly-CSharp
-        m_MethodName: set_DistanceParameter
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _offEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &348662614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348662610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7273b4976176c463587675de4c9d228a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _action:
-    m_Name: Action
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 097b91fe-b83b-4c0a-9f17-9515c190b33f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: ec3a3469-9bb5-4e33-a30e-df6c6c8a134f
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Action
-      m_Flags: 0
-    m_Flags: 0
-  _onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 26578945}
-        m_TargetAssemblyTypeName: Fluo.CameraController, Assembly-CSharp
-        m_MethodName: set_DistanceParameter
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0.5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _offEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &348662615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4551,6 +4415,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Action
       m_Flags: 0
+    - m_Name: 
+      m_Id: 1b827756-d01e-4b70-b8be-0cdaab7089e8
+      m_Path: <RemoteInputDevice>/button3
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
     m_Flags: 0
   _onEvent:
     m_PersistentCalls:
@@ -5170,6 +5042,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 791f64bc-9844-480c-ac6a-bbe6f35d4f78
       m_Path: <Keyboard>/3
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    - m_Name: 
+      m_Id: c2380201-720e-4ec5-84be-ab75e502c2fd
+      m_Path: <RemoteInputDevice>/button4
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -5833,6 +5713,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Action
       m_Flags: 0
+    - m_Name: 
+      m_Id: a8a782c3-1fda-4cc8-a6d2-37fc94b26f8e
+      m_Path: <RemoteInputDevice>/button5
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
     m_Flags: 0
   _onEvent:
     m_PersistentCalls:
@@ -6043,9 +5931,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1973581786}
   - component: {fileID: 1973581790}
-  - component: {fileID: 1973581789}
-  - component: {fileID: 1973581788}
-  - component: {fileID: 1973581787}
   m_Layer: 0
   m_Name: Camera Angle
   m_TagString: Untagged
@@ -6068,147 +5953,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 124099774}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1973581787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973581785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7273b4976176c463587675de4c9d228a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _action:
-    m_Name: Action
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 097b91fe-b83b-4c0a-9f17-9515c190b33f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: ec3a3469-9bb5-4e33-a30e-df6c6c8a134f
-      m_Path: <Keyboard>/3
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Action
-      m_Flags: 0
-    m_Flags: 0
-  _onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 26578945}
-        m_TargetAssemblyTypeName: Fluo.CameraController, Assembly-CSharp
-        m_MethodName: set_AngleParameter
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _offEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1973581788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973581785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7273b4976176c463587675de4c9d228a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _action:
-    m_Name: Action
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 097b91fe-b83b-4c0a-9f17-9515c190b33f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: ec3a3469-9bb5-4e33-a30e-df6c6c8a134f
-      m_Path: <Keyboard>/2
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Action
-      m_Flags: 0
-    m_Flags: 0
-  _onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 26578945}
-        m_TargetAssemblyTypeName: Fluo.CameraController, Assembly-CSharp
-        m_MethodName: set_AngleParameter
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0.5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _offEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1973581789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973581785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7273b4976176c463587675de4c9d228a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _action:
-    m_Name: Action
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 097b91fe-b83b-4c0a-9f17-9515c190b33f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: ec3a3469-9bb5-4e33-a30e-df6c6c8a134f
-      m_Path: <Keyboard>/1
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Action
-      m_Flags: 0
-    m_Flags: 0
-  _onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 26578945}
-        m_TargetAssemblyTypeName: Fluo.CameraController, Assembly-CSharp
-        m_MethodName: set_AngleParameter
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _offEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1973581790
 MonoBehaviour:
   m_ObjectHideFlags: 0
